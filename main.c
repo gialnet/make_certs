@@ -4,14 +4,8 @@
  * Rutina generadora de los certificados de las bases de datos.
  * Se va a disponer de un certificado para cada base de datos PostgreSQL 9.3
  * exitente en la nube bajo el dominio myEmpresa.eu compuesto por servidores
- * con sistema operativo Unix System V SmartOS. Las maquinas virtuales empienzan
- * con una configuración de:    coste hora     coste mes
- * 1CPU 	1 GB 	30 GB 	0,060 € 	43,80 €
- * 1CPU 	1.5 GB 	45 GB 	0,089 € 	64,97 €
- * 2CPU 	2 GB 	60 GB 	0,109 € 	79,57 €
- * 4CPU 	4 GB 	120 GB 	0,192 € 	140,16 €
- * 8CPU 	8 GB 	240 GB 	0,338 € 	246,74 €
- 
+ * con sistema operativo Unix System V SmartOS. 
+
  * Se mantine uan relación constante de cantidad de memoria RAM por usuario
  * con su valor de 34.13 MegaBytes por usuario. Este valor será menor a este 
  * máximo teorico ya que el propio sistema necesita también sus propios recursos

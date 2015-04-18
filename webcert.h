@@ -1,7 +1,5 @@
 /* ---------------------------------------------------------------------------*
  * file:        webcert.h                                                     *
- * purpose:     provide standard definitions accross cgi's                    *
- * author:      03/04/2004 Frank4DD                                           *
  * ---------------------------------------------------------------------------*/
 
 #include "openssl/asn1.h"
@@ -29,14 +27,8 @@
 #define DAYS_VALID      1095
 #define YEARS_VALID     3
 
-/* For the public demo, I enforce adding the source IP to the certificate CN */
-/* For internal use, you could take it out. */
-/* #define FORCE_SOURCE_IP_INCLUSION	TRUE */
 
 /***************** no changes required below this line ************************/
-
-#define CONTACT_EMAIL	"support@frank4dd.com"
-#define SW_VERSION	"WebCert v1.7.3 (11/08/2010)"
 
 
 #define REQLEN		4096 /* Max length of a certificate request in bytes.*/
@@ -55,9 +47,6 @@
 
 #define int_error(msg)  handle_error(__FILE__, __LINE__, msg)
 
-//**yo** void pagehead(char *title);
-//**yo** void handle_error(const char *file, int lineno, const char *msg);
-//ASN1_INTEGER *x509_load_serial(char *CAfile, char *serialfile, int create);
 BIGNUM *load_serial(char *serialfile, int create, ASN1_INTEGER **retai);
 int save_serial(char *serialfile, char *suffix, BIGNUM *serial, ASN1_INTEGER **retai);
 

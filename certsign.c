@@ -294,10 +294,6 @@ int certsign () {
    X509_EXTENSION_free(ext);
 
   
-   /* if extended key usgaes has been requested,we add it here */
-   /* http://tools.ietf.org/html/rfc5280#section-4.2.1.12      */
-   /* http://www.openssl.org/docs/apps/x509v3_config.html      */
-   //if (cgiFormCheckboxSingle("extkeyusage") == cgiFormSuccess) {
  
      if (strcmp(extkeytype, "tlsws") == 0) {
        if (! (ext = X509V3_EXT_conf(NULL, &ctx,
@@ -338,7 +334,7 @@ int certsign () {
      if (! X509_add_ext(newcert, ext, -1))
          printf("Error adding X509 extension to certificate");
      X509_EXTENSION_free(ext);
-//   }
+
 
 /* -------------------------------------------------------------------------- *
  * Firmar el nuevo certificado con la clave privada de la CA                  *

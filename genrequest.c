@@ -46,9 +46,7 @@ int genrequest(char department[], char cname0[]) {
    char         province[81]     = "Gloucestershire";
    char         locality[81]     = "Tetbury";
    char         organisation[81] = "TETBURY SOFTWARE SERVICES Ltd";
-   //char         department[81]   = "myEmpresa-001";
    char 	email_addr[81]   = "secure@retburyss.co.uk";
-   //char 	cname0[81]       = "81.45.18.210";
    char 	cname1[81]       = "";
    char 	cname2[81]       = "";
    char 	surname[81]      = "";
